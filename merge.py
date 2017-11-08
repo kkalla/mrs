@@ -15,10 +15,10 @@ from collections import Counter
 
 from subprocess import check_output
 
-df_train = pd.read_csv('C:\\Users\\gyujin\\Desktop\\kaggle data\\train.csv')
-df_test = pd.read_csv('C:\\Users\\gyujin\\Desktop\\kaggle data\\test.csv')
-df_songs = pd.read_csv('C:\\Users\\gyujin\\Desktop\\kaggle data\\songs.csv')
-df_members = pd.read_csv('C:\\Users\\gyujin\\Desktop\\kaggle data\\members.csv')
+df_train = pd.read_csv('data/train.csv')
+df_test = pd.read_csv('data/test.csv')
+df_songs = pd.read_csv('data/songs.csv')
+df_members = pd.read_csv('data/members.csv')
 
 
 # info
