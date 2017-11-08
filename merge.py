@@ -20,10 +20,7 @@ df_test = pd.read_csv('C:\\Users\\gyujin\\Desktop\\kaggle data\\test.csv')
 df_songs = pd.read_csv('C:\\Users\\gyujin\\Desktop\\kaggle data\\songs.csv')
 df_members = pd.read_csv('C:\\Users\\gyujin\\Desktop\\kaggle data\\members.csv')
 
-# 샘플로 0.01 만 뽑자걍
 
-df_train = df_train.sample(frac=0.01)
-df_test= df_test.sample(frac=0.01)
 # info
 df_train.info()
 df_members.info()
