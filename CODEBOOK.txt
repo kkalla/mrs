@@ -1,0 +1,11 @@
+CODEBOOK
+===========
+Python
+
+* merge.py - train.csv, test.csv, members.csv, songs.csv -> train_merged.csv / test_merged.csv
+-----------
+R
+* genre_ids.R - train_merged.csv, test_merged.csv의 genre_ids를 numeric으로 변환 -> save as input.csv
+* xgboost.R - Changing features into numeric and fit the xgboost model.
+* bd,registered.R - 
+
