@@ -22,13 +22,13 @@ df_members = pd.read_csv('data/members.csv')
 
 
 # info
-df_train.info()
-df_members.info()
+#df_train.info()
+#df_members.info()
 
 # null value
 
-df_train.isnull().sum()
-df_members.isnull().sum()
+#df_train.isnull().sum()
+#df_members.isnull().sum()
 
 
 # merge dfs
@@ -58,7 +58,7 @@ print(len(df_test_merged))
 
 # merged info & visualization
 
-df_train_merged.info()
+#df_train_merged.info()
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -72,12 +72,12 @@ def bar_chart(feature):
     df.plot(kind='bar',stacked=True, figsize=(10,5))
     
 # barchart source_system_tab, source_screen_name, source_type    
-bar_chart('source_system_tab')
-bar_chart('source_screen_name')
-bar_chart('source_type')
-bar_chart('gender')
-bar_chart('city')
-bar_chart('bd')
+#bar_chart('source_system_tab')
+#bar_chart('source_screen_name')
+#bar_chart('source_type')
+#bar_chart('gender')
+#bar_chart('city')
+#bar_chart('bd')
 
 print(len(df_train))
 print(len(df_train_merged))
@@ -90,11 +90,11 @@ df_train_target = df_train_merged['target'].astype(np.int8)
 df_test_id = df_test_merged['id']
 
 #--- now dropping those columns from respective dfs ---
-df_train_merged.drop('target', axis=1, inplace=True)
-df_test_merged.drop('id', axis=1, inplace=True)
+#df_train_merged.drop('target', axis=1, inplace=True)
+#df_test_merged.drop('id', axis=1, inplace=True)
 
-df_train_merged['is_train'] = 1
-df_test_merged['is_train'] = 0
+#df_train_merged['is_train'] = 1
+#df_test_merged['is_train'] = 0
 
 ## handeling missing value
 cols_missing_val_train = df_train_merged.columns[df_train_merged.isnull().any()].tolist()
@@ -353,26 +353,6 @@ print('Whether intersections are present or not : ',np.intersect1d(lyricist_wo_n
 df_train_merged.lyricist = df_train_merged.lyricist.fillna('no_lyricist')
 df_test_merged.lyricist = df_test_merged.lyricist.fillna('no_lyricist')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+df_train_merged.to_csv('data/train_merged.csv',index=False)
+df_test_merged.to_csv('data/test_merged.csv',index=False)
 
